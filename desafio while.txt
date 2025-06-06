@@ -1,0 +1,224 @@
+
+while True:
+    
+     n1 = float(input("Digite um número: "))
+    
+    operacao = input("Digite uma das operações +, -, *, / ou 'sair' para encerrar: ").strip()
+ 
+   
+    if operacao.lower() == "sair":
+        print("Saindo do programa.")
+        break
+ 
+    if operacao not in ["+", "-", "*", "/"]:
+        print("Operação inválida. Tente novamente.")
+        continue
+ 
+   
+    n2 = float(input("Digite outro número: "))
+ 
+    if operacao == "+":
+        resultado = n1 + n2
+    elif operacao == "-":
+        resultado = n1 - n2
+    elif operacao == "*":
+        resultado = n1 * n2
+    elif operacao == "/":
+        if n2 == 0:
+            print("Erro: Divisão por zero.")
+            continue
+        resultado = n1 / n2
+ 
+    
+    print(f"Seu resultado é: {resultado}")
+
+
+
+
+
+
+
+# exercicio 03
+
+numero=int(input("digite um número:"))
+
+
+for i in range(1,11):
+    print(f"{numero} X {i}= {numero * i}" )
+
+else:
+    print("número invalido digite outro número")
+
+
+# exercicio 04
+'''
+numero=("digite um número: {2,4,6,8,10} ")
+
+maior=max(2,4,6,8,10)
+soma= 2+4+6+8+10
+media=2+4+6+8+10/5
+
+print(f"o maior número é: {maior}")
+print(f"a soma dos número e: {soma}")
+print(f"a média dos números é: {media}")
+'''
+
+# exercicio 05
+'''
+nome=str(input("digite um nome:"))
+
+while True:
+    if len(nome)>3:
+        print("nome valido!")
+        break
+    
+    if len(nome)<3:
+        print("nome invalido!")
+        nome=str(input("digite um nome com mais de 3 caracteres:"))
+        break
+
+idade=int(input("digite uma idade entre 0 a 150."))
+while True:
+    if idade <0 and idade>150:
+        print("número invalido!")
+        idade=int(input("digite novamente a idade:"))
+        break
+
+salario=int(input("digite o seu sálario:"))
+
+while True:
+    if salario >0:
+        print("sálario valido!")
+    if salario <=0:
+        salario=int(input("digite um sálario maior a 0:"))
+        break
+    '''
+
+
+ # exercicio 06
+
+'''
+populacao_a=8000
+populacao_b=200000
+taxa_b=0.015
+taxa=0.3
+
+anos=0
+
+while populacao_a < populacao_b:
+    populacao_a+=populacao_a *taxa
+    populacao_b+=populacao_b *taxa_b
+    anos+=1
+
+
+print(f"o resultado necessário {anos} para ultrapassar")
+'''
+
+
+
+# exercicio 07
+'''
+while True:
+    positivo = float(input("Digite um número: "))
+    
+    if positivo < 0:
+        print("Número inválido")
+    elif positivo >= 0:
+        print("Número válido")
+        break
+'''
+
+
+
+
+# exercicio 08
+'''
+notas = []
+
+contador = 0
+ 
+
+while contador < 4:
+    
+    nota_input = input(f"Digite a {contador+1}ª nota (ou -1 para interromper): ")
+    
+    if nota_input == "-1":
+        break
+   
+    if nota_input.replace('.', '', 1).isdigit() or (nota_input[0] == '-' and nota_input[1:].replace('.', '', 1).isdigit()):
+        nota = float(nota_input)
+        
+        if 0 <= nota <= 10:
+            notas.append(nota)
+            contador += 1
+        else:
+            print("Nota inválida! A nota deve estar entre 0 e 10.")
+    else:
+        print("Entrada inválida! Por favor, insira um valor numérico válido.")
+
+if len(notas) > 0:
+    
+    media = sum(notas) / len(notas)
+    print(f"A média das notas é: {media:.2f}")
+else:
+    print("Nenhuma nota foi informada.")
+'''
+
+
+
+
+
+#exercicio 09
+
+'''
+candidato1 = 0
+candidato2 = 0
+candidato3 = 0
+candidato4 = 0
+nulos = 0
+brancos = 0
+
+while True:
+    voto = int(input("Digite o código do voto (1, 2, 3, 4, 5, 6) ou 0 para encerrar: "))
+    
+    if voto == 0:
+        break
+    
+    elif voto == 1:
+        candidato1 += 1
+    elif voto == 2:
+        candidato2 += 1
+    elif voto == 3:
+        candidato3 += 1
+    elif voto == 4:
+        candidato4 += 1
+    elif voto == 5:
+        nulos += 1
+    elif voto == 6:
+        brancos += 1
+    else:
+        print("Código de voto inválido. Tente novamente.")
+        continue
+
+   
+    print("\nStatus atual dos votos:")
+    print(f"Candidato 1: {candidato1} votos")
+    print(f"Candidato 2: {candidato2} votos")
+    print(f"Candidato 3: {candidato3} votos")
+    print(f"Candidato 4: {candidato4} votos")
+    print(f"Votos nulos: {nulos} votos")
+    print(f"Votos em branco: {brancos} votos")
+    
+
+print("\nResultado final da eleição:")
+print(f"Candidato 1: {candidato1} votos")
+print(f"Candidato 2: {candidato2} votos")
+print(f"Candidato 3: {candidato3} votos")
+print(f"Candidato 4: {candidato4} votos")
+'''
+
+
+
+
+
+
